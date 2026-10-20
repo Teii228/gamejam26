@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://gwy00msm4b3g"]
+
+[ext_resource type="Texture2D" uid="uid://boqfyl7gh4xhg" path="res://bot_emoji_transparent_solo1.png" id="1_y2vjg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cf5bg"]
+size = Vector2(15, 17)
+
+[node name="RigidBody2D" type="RigidBody2D" unique_id=763990547]
+rotation = -1.5585439
+freeze = true
+
+[node name="BotEmojiTransparentSolo1" type="Sprite2D" parent="." unique_id=1045751249]
+position = Vector2(2.9802322e-07, 0)
+scale = Vector2(0.60606056, 0.5833333)
+texture = ExtResource("1_y2vjg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1140819961]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_cf5bg")

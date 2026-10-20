@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bt7oprg4ib5xw"]
+
+[ext_resource type="Script" uid="uid://boowsbqtr3yuk" path="res://path_follow_2d.gd" id="1_0wote"]
+[ext_resource type="PackedScene" uid="uid://gwy00msm4b3g" path="res://bot1.tscn" id="2_whr7s"]
+
+[node name="PathFollow2D" type="PathFollow2D" unique_id=63904866]
+rotation = 1.5707964
+script = ExtResource("1_0wote")
+
+[node name="RigidBody2D" parent="." unique_id=763990547 instance=ExtResource("2_whr7s")]
+rotation = -1.5707964
+freeze_mode = 1
