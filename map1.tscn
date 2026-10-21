@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://gwy00msm4b3g" path="res://bot1.tscn" id="3_flm4b"]
 [ext_resource type="Script" uid="uid://dfyhsw6vl8b0u" path="res://placement_metod.gd" id="3_gtvy4"]
 [ext_resource type="Script" uid="uid://baj1ggik76uey" path="res://place_manegment.gd" id="4_qva1w"]
+[ext_resource type="PackedScene" uid="uid://52mfvmc2745n" path="res://Tower.tscn" id="5_57qb2"]
 [ext_resource type="Texture2D" uid="uid://cf4pmqfq8aptf" path="res://shotgun.png" id="7_57qb2"]
 
 [sub_resource type="Curve2D" id="Curve2D_1b6mr"]
@@ -36,6 +37,7 @@ tile_set = ExtResource("1_p84jh")
 
 [node name="PlaceManegment" type="Node2D" parent="." unique_id=177922855]
 script = ExtResource("4_qva1w")
+tower_scene = ExtResource("5_57qb2")
 
 [node name="towers" type="Node2D" parent="." unique_id=848856447]
 
