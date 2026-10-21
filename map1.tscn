@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://52mfvmc2745n" path="res://Tower.tscn" id="5_57qb2"]
 [ext_resource type="PackedScene" uid="uid://dh0w7lkjy265j" path="res://ar_15.tscn" id="6_57qb2"]
 [ext_resource type="PackedScene" uid="uid://cky8mmtdqhad1" path="res://shotgun.tscn" id="7_57qb2"]
+[ext_resource type="Script" uid="uid://dhhyp6ew8dbtr" path="res://wave_manager.gd" id="11_vl4cn"]
 
 [sub_resource type="Curve2D" id="Curve2D_1b6mr"]
 _data = {
@@ -53,7 +54,7 @@ position = Vector2(187, 206)
 curve = SubResource("Curve2D_1b6mr")
 script = ExtResource("2_flm4b")
 object_scene = ExtResource("2_cf5bg")
-max_spawns = 5
+max_spawns = 0
 
 [node name="PathFollow2D" parent="Path2D" unique_id=63904866 instance=ExtResource("2_cf5bg")]
 visible = false
@@ -72,6 +73,7 @@ offset_right = 1035.0
 offset_bottom = 119.0
 
 [node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=641541026]
+visible = false
 position = Vector2(-4, -1)
 freeze = true
 
@@ -83,3 +85,27 @@ texture = ExtResource("2_ibjaa")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=901813811]
 position = Vector2(-0.5, 0.5)
 shape = SubResource("RectangleShape2D_cf5bg")
+
+[node name="WaveManager" type="Node" parent="." unique_id=1545355442 node_paths=PackedStringArray("path", "wave_label", "wave_button")]
+script = ExtResource("11_vl4cn")
+enemy_scene = ExtResource("2_cf5bg")
+path = NodePath("../Path2D")
+wave_label = NodePath("../CanvasLayer/Wave Label")
+wave_button = NodePath("../CanvasLayer/Wave Button")
+enemies_per_spawn = 20
+spawn_spacing = 15.0
+time_between_waves = 15.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1813330609]
+
+[node name="Wave Button" type="Button" parent="CanvasLayer" unique_id=625662503]
+offset_left = 583.0
+offset_top = 101.0
+offset_right = 591.0
+offset_bottom = 109.0
+
+[node name="Wave Label" type="Label" parent="CanvasLayer" unique_id=1040068076]
+offset_left = 37.0
+offset_top = 31.0
+offset_right = 77.0
+offset_bottom = 54.0

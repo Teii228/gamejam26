@@ -1,7 +1,7 @@
 extends Node2D
 
-@export var damage: float = 20.0
-@export var attack_range: float = 200.0
+@export var damage: float = 5.0
+@export var attack_range: float = 300.0
 
 var enemies_in_range: Array = []
 var current_target: Node2D = null

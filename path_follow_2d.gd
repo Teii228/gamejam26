@@ -4,7 +4,7 @@ extends PathFollow2D
 @export var damage_to_base: float = 10.0
 
 # --- HÄLSO-SYSTEM (Utan UI) ---
-@export var max_hp: float = 50.0
+@export var max_hp: float = 25.0
 var current_hp: float
 
 func _ready() -> void:

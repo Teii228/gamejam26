@@ -1,0 +1,139 @@
+[gd_scene format=3 uid="uid://rf6pdqqsilbd"]
+
+[ext_resource type="Texture2D" uid="uid://wgtgbgmgdoxf" path="res://image.png" id="1_eiy7p"]
+[ext_resource type="Script" uid="uid://djob5j11yd4yx" path="res://main_menu.gd" id="1_h7a2f"]
+[ext_resource type="FontFile" uid="uid://datmotfenpggx" path="res://born2bsporty-fs.otf" id="1_i26rj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eiy7p"]
+bg_color = Color(0.43714568, 0.75661737, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.5821113, 0.65553534, 0.32452428, 1)
+border_blend = true
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color(0.19539517, 0.6459925, 0.28348595, 1)
+shadow_size = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_31qfy"]
+bg_color = Color(0.5485784, 0.65688753, 0.5609355, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h7a2f"]
+bg_color = Color(0.061926693, 0.061926708, 0.061926648, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.63887554, 0.20745385, 0.3116877, 1)
+border_blend = true
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color(0.87428355, 0.20712495, 0.31125015, 0.6)
+shadow_size = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qie43"]
+bg_color = Color(0.7137255, 0.18431373, 0.23921569, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[node name="control" type="Control" unique_id=2088546128]
+layout_mode = 3
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_right = 3.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("1_h7a2f")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1431602257]
+layout_mode = 0
+offset_left = -138.0
+offset_top = -11.0
+offset_right = 1293.0
+offset_bottom = 689.0
+mouse_filter = 2
+texture = ExtResource("1_eiy7p")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="." unique_id=1254108950]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -161.0
+offset_top = 72.0
+offset_right = 173.0
+offset_bottom = 141.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0.38820627, 0.7139049, 0.2791176, 0)
+theme_override_fonts/font = ExtResource("1_i26rj")
+theme_override_font_sizes/font_size = 60
+text = "TOWER DEFENCE"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=1014132661]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -74.0
+offset_top = -37.5
+offset_right = 74.0
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_i26rj")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_eiy7p")
+theme_override_styles/hover = SubResource("StyleBoxFlat_31qfy")
+action_mode = 0
+text = "START"
+
+[node name="Button2" type="Button" parent="." unique_id=1323252308]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -54.0
+offset_top = -233.0
+offset_right = 57.5
+offset_bottom = -172.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.97179, 0.8404557, 0.8203618, 1)
+theme_override_fonts/font = ExtResource("1_i26rj")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_h7a2f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qie43")
+text = "EXIT
+"
+icon_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
