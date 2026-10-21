@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://crk2shyxbrd1r" path="res://path_2d.gd" id="2_flm4b"]
 [ext_resource type="Texture2D" uid="uid://boqfyl7gh4xhg" path="res://bot_emoji_transparent_solo1.png" id="2_ibjaa"]
 [ext_resource type="PackedScene" uid="uid://gwy00msm4b3g" path="res://bot1.tscn" id="3_flm4b"]
+[ext_resource type="PackedScene" uid="uid://dh0w7lkjy265j" path="res://ar_15.tscn" id="7_gtvy4"]
 
 [sub_resource type="Curve2D" id="Curve2D_1b6mr"]
 _data = {
@@ -62,4 +63,6 @@ shape = SubResource("RectangleShape2D_cf5bg")
 
 [node name="RigidBody2D2" parent="." unique_id=763990547 instance=ExtResource("3_flm4b")]
 position = Vector2(0, -5)
-rotation = 0.0
+
+[node name="AR-15" parent="." unique_id=1339760420 instance=ExtResource("7_gtvy4")]
+position = Vector2(375, 306)
