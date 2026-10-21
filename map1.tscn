@@ -48,7 +48,6 @@ offset_right = 1035.0
 offset_bottom = 119.0
 
 [node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=641541026]
-visible = false
 position = Vector2(-41, 5)
 freeze = true
 
@@ -65,4 +64,5 @@ shape = SubResource("RectangleShape2D_cf5bg")
 position = Vector2(0, -5)
 
 [node name="AR-15" parent="." unique_id=1339760420 instance=ExtResource("7_gtvy4")]
-position = Vector2(375, 306)
+position = Vector2(206, 316)
+damage = 5.0
