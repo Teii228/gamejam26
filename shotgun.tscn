@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://cky8mmtdqhad1"]
+
+[ext_resource type="Script" uid="uid://bmq13nptelrer" path="res://ar_15.gd" id="1_5bb75"]
+[ext_resource type="Texture2D" uid="uid://cf4pmqfq8aptf" path="res://shotgun.png" id="2_5bb75"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1b6mr"]
+radius = 58.00862
+
+[node name="ShotGun" type="Node2D" unique_id=1339760420]
+script = ExtResource("1_5bb75")
+attack_range = 100.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=856955411]
+scale = Vector2(0.16734762, 0.18880571)
+texture = ExtResource("2_5bb75")
+
+[node name="RangeArea" type="Area2D" parent="." unique_id=1161494951]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RangeArea" unique_id=368868811]
+shape = SubResource("CircleShape2D_1b6mr")
+
+[node name="ShootTimer" type="Timer" parent="." unique_id=1440495361]
+autostart = true
+
+[connection signal="body_entered" from="RangeArea" to="." method="_on_range_area_body_entered"]
+[connection signal="body_exited" from="RangeArea" to="." method="_on_range_area_body_exited"]
+[connection signal="timeout" from="ShootTimer" to="." method="_on_shoot_timer_timeout"]
